@@ -1,12 +1,14 @@
 package patrick.com.springmvc.domain;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Event {
 
     private String name;
