@@ -2,7 +2,8 @@
 - 스프링은 서블릿기반으로 웹 에플리케이션을 쉽게 만들수 있는 프레임워크이다.
 - 웹 애플리케이션 개발용 스펙과 API 제공
 - 한 요청을 처리할때마다 하나의 스레드를 생성하여 요청을 처리함. 
-> Front Controller 의 역할을 하여 MVC 스프링 MVC 의 핵심 역할로써 Http Method 와 HandlerMapping 등 일련의 과정을 수행함.
+> Front Controller 의 역할을 하여 MVC 스프링 MVC 의 핵심 역할로써 Http Method 와 HandlerMapping 등 일련의 과정을 수행함. request Mapping 에 해당하는
+> 메서드를 실행하며 return 값에 대한 처리를 함.
 
 ## 서블릿 생명주기
 - 서블릿 컨테이너가 인스턴스의 init 메서드를 호출하여 초기화 한다.
