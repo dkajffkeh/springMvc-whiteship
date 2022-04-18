@@ -1,21 +1,16 @@
 package patrick.com.springmvc.controller;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import patrick.com.springmvc.service.EventService;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+import patrick.com.springmvc.domain.Person;
 
-@Controller
-@RequiredArgsConstructor
+@RestController
 public class EventController {
 
-    private final EventService eventService;
-
-    @GetMapping("/events")
-    public String events(Model model){
-        model.addAttribute("events",eventService.getEvents());
-        return "events/list";
+    @GetMapping("/hello/{name}")
+    public String hello(@PathVariable("id") Person person){
+        return "Hello "+person.getName();
     }
 
 }
